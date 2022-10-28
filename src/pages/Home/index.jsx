@@ -23,7 +23,7 @@ const Home = () => {
       <div className='pagination'>
         <button
           className='cursor'
-          onClick={() => setPage(prev => (prev === 1 ? 1 : prev--))}
+          onClick={() => setPage(prev => (prev === 1 ? 1 : prev-1))}
         >
           Prev
         </button>
@@ -32,11 +32,11 @@ const Home = () => {
             {page - 1}
           </p>
         )}
-        <p className='cursor'>{page}</p>
+        <h2><strong>{page}</strong></h2>
         <p className='cursor' onClick={() => setPage(page + 1)}>
           {page + 1}
         </p>
-        <button className='cursor' onClick={() => setPage(prev => prev++)}>
+        <button className='cursor' onClick={() => setPage(prev => prev+1)}>
           Next
         </button>
       </div>
